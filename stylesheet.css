@@ -1,0 +1,76 @@
+/* Variable declarations */
+:root{
+    --orange:hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --padding: 20px;
+    --light-gray: hsl(0, 0%, 95%);
+    --transparent: hsla(0, 0%, 100%, 0.75);
+    
+}
+
+
+/* Styles */
+body{
+    background-color: var(--light-gray) ;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    margin: 100 auto;
+    padding: 20px;
+    color: var(--transparent);  
+ 
+}
+.container{
+    
+    display: flex;
+    
+    justify-content: center; 
+}
+h1{
+    color: var(--light-gray);
+}
+.sedans{
+    
+    background-color: var(--orange);
+    padding: var(--padding);
+    align-items: left;
+}
+.suvs{
+    background-color: var(--cyan);
+    padding: var(--padding);
+    
+}
+.luxury{
+    background-color: var(--dark-cyan);
+    padding: var(--padding);
+}
+
+/* Buttons */
+button{
+    border-color: var(--light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--light-gray) ;
+    padding: 5%;
+    border-radius: 20px;
+}
+.sedans button{
+    color: var(--orange);
+}
+.suvs button{
+    color: var(--cyan);
+}
+.luxury button{
+    color: var(--dark-cyan);
+}
+
+/* Mobile */
+@media (orientation: portrait) and (max-width: 600px){
+
+
+    .container{
+        display: grid;
+        margin-top: auto;
+        grid-template-columns: 65%;
+        grid-template-rows: 1fr 1fr 1fr;  
+    }
+}
